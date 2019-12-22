@@ -7,7 +7,9 @@
 #    handles trying to install the same package more than once.
 #  - Pass -y to choco install to avoid interactive prompts
  
- 
+# Install Rhapsody IDE
+& cmd.exe /c C:\vagrant\RhapsodyIDE6.4.2.exe /S
+
 # Fix Windows Explorer
 Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
  
@@ -18,8 +20,6 @@ choco install -y 7zip
 choco install -y notepadplusplus
 choco install git -y -params '"/GitAndUnixToolsOnPath /NoAutoCrlf"'
 choco install -y sql-server-management-studio
- 
-C:\vagrant\RhapsodyIDE6.4.2.exe /S
 
 Remove-Item 'C:\Users\Public\Desktop\Boxstarter Shell.lnk'
 
@@ -27,20 +27,20 @@ $Desktop = [Environment]::GetFolderPath("Desktop")
 
 $WScriptShell = New-Object -ComObject WScript.Shell
 
-$Shortcut = "${Desktop}\Notepad++.lnk"
-$Shortcut.TargetPath = $WScriptShell.CreateShortcut("${env:ProgramFiles}\Notepad++\notepad++.exe")
+$Shortcut = $WScriptShell.CreateShortcut("${Desktop}\Notepad++.lnk")
+$Shortcut.TargetPath = "${env:ProgramFiles}\Notepad++\notepad++.exe"
 $Shortcut.Save()
 
-$Shortcut = "${Desktop}\Rhapsody.lnk"
-$Shortcut.TargetPath = $WScriptShell.CreateShortcut("${env:ProgramFiles(x86)}\Orion Health\Rhapsody IDE 6\Rhapsody IDE\RhapAdmin6.exe")
+$Shortcut = $WScriptShell.CreateShortcut("${Desktop}\Rhapsody.lnk")
+$Shortcut.TargetPath = "${env:ProgramFiles(x86)}\Orion Health\Rhapsody IDE 6\Rhapsody IDE\RhapAdmin6.exe"
 $Shortcut.Save()
 
-$Shortcut = "${Desktop}\SQL Server Management Studio 18.lnk"
-$Shortcut.TargetPath = $WScriptShell.CreateShortcut("${env:ProgramFiles(x86)}\Microsoft SQL Server Management Studio 18\Common7\IDE\Ssms.exe")
+$Shortcut = $WScriptShell.CreateShortcut("${Desktop}\SQL Server Management Studio 18.lnk")
+$Shortcut.TargetPath = "${env:ProgramFiles(x86)}\Microsoft SQL Server Management Studio 18\Common7\IDE\Ssms.exe"
 $Shortcut.Save()
 
-$Shortcut = "${Desktop}\Git Bash.lnk"
-$Shortcut.TargetPath = $WScriptShell.CreateShortcut("${env:ProgramFiles}\Git\git-bash.exe")
+$Shortcut = $WScriptShell.CreateShortcut("${Desktop}\Git Bash.lnk")
+$Shortcut.TargetPath = "${env:ProgramFiles}\Git\git-bash.exe"
 $Shortcut.Arguments = "--cd-to-home"
 $Shortcut.Save()
 
