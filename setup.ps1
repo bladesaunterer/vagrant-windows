@@ -32,7 +32,7 @@ $Shortcut.TargetPath = "${env:ProgramFiles}\Notepad++\notepad++.exe"
 $Shortcut.Save()
 
 $Shortcut = $WScriptShell.CreateShortcut("${Desktop}\Rhapsody.lnk")
-$Shortcut.TargetPath = "${env:ProgramFiles(x86)}\Orion Health\Rhapsody IDE 6\Rhapsody IDE\RhapAdmin6.exe"
+$Shortcut.TargetPath = "${env:ProgramFiles(x86)}\Rhapsody\Rhapsody IDE 6\Rhapsody IDE\RhapAdmin6.exe"
 $Shortcut.Save()
 
 $Shortcut = $WScriptShell.CreateShortcut("${Desktop}\SQL Server Management Studio 18.lnk")
