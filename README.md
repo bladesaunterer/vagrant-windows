@@ -1,7 +1,7 @@
 # Windows 10 Vagrant Box for ICs
 
 Will set up a virtual machine with all the windows specific applications required for IC work
- * Rhapsody IDE 6.4.2
+ * Rhapsody IDE 6.5+
  * Notepad++
  * SQL Server Management Studio
  * Git Bash
@@ -23,9 +23,7 @@ https://www.vagrantup.com/
 Requires virtualbox 6.0 (6.1 not currently supported by vagrant)
 https://www.virtualbox.org/wiki/Download_Old_Builds_6_0
 
-Requires Rhapsody 6.4.2 installer (wont work with 6.5+)
-* Rhapsody slurper doesn't currently work reliably with config committed with 6.5+
-* Installation paths change with 6.5 
+Requires Rhapsody 6.5+
 * Raise RM ticket for IDE download
 
 ### Installing
@@ -52,7 +50,7 @@ windows-10-box
 └── setup.ps1
 ```
 
-Run vagrant up. This will start setting up the virtual machine. Please allow 45 minutes for setup to complete. Once the vagrant command completes, the virtual machine will restart and continue setting up the applications.
+Run vagrant up. This will start setting up the virtual machine. Please allow 3 hours for setup to complete (The first time running will take the longest as the Windows 10 image needs to be downladed, subsequent runs will be approx. 45 minutes). Once the vagrant command completes, the virtual machine will restart and continue setting up the applications with Powershell.
 
 ```
 vagrant up
