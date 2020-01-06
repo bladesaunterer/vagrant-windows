@@ -6,6 +6,8 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 8081, host: 9003
   config.vm.network "forwarded_port", guest: 8444, host: 9004
   config.vm.network "forwarded_port", guest: 8449, host: 9005
+  config.vm.network "forwarded_port", guest: 443, host: 9006
+  config.vm.network "forwarded_port", guest: 4501, host: 9007
 
   config.vm.provider "virtualbox" do |vb|
    vb.name = "Windows 10 VM"
