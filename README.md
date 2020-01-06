@@ -1,5 +1,7 @@
 # Windows 10 Vagrant Box for ICs
 
+![](https://stash.orionhealth.global/projects/SI/repos/windows-10-box/raw/.README/desktop.png?at=refs%2Fheads%2Fmaster)
+
 Will set up a virtual machine with all the windows specific applications required for IC work
  * Rhapsody IDE 6.5+
  * Notepad++
@@ -57,6 +59,8 @@ vagrant up
 ```
 
 When prompted to do so within the VM, type in 'enter' and press the return key to complete the setup
+
+![](https://stash.orionhealth.global/projects/SI/repos/windows-10-box/raw/.README/prompt.png?at=refs%2Fheads%2Fmaster)
 
 ```
 enter
