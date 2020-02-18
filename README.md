@@ -19,14 +19,15 @@ Other features
 
 ### Prerequisites
 
-Requires vagrant 2.2+
+Requires vagrant 2.2.7+
 https://www.vagrantup.com/
 
-Requires virtualbox 6.0 (6.1 not currently supported by vagrant)
-https://www.virtualbox.org/wiki/Download_Old_Builds_6_0
+Requires virtualbox 6.1.x 
+https://www.virtualbox.org/wiki/Downloads
 
 Requires Rhapsody 6.5+
 * Raise RM ticket for IDE download
+
 
 ### Installing
 
