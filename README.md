@@ -22,12 +22,13 @@ Other features
 Requires vagrant 2.2.7+
 https://www.vagrantup.com/
 
-Requires virtualbox 6.1.x 
-https://www.virtualbox.org/wiki/Downloads
+Requires virtualbox 6.0.x 
+https://www.virtualbox.org/wiki/Download_Old_Builds_6_0
 
 Requires Rhapsody 6.5+
 * Raise RM ticket for IDE download
 
+note: As of the 19th Feb 2020, the versions that definitely work together are Vagrant 2.2.7, Virtualbox 6.0.14 and Rhapsody 6.5
 
 ### Installing
 
