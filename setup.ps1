@@ -44,4 +44,7 @@ $Shortcut.TargetPath = "${env:ProgramFiles}\Git\git-bash.exe"
 $Shortcut.Arguments = "--cd-to-home"
 $Shortcut.Save()
 
+# Maps command key to control key (dont need to switch keys to copy/paste between systems) 
+Invoke-Command {reg import C:\vagrant\keyboard_layout.reg}
+
 exit
