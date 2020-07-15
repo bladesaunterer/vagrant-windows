@@ -6,9 +6,6 @@
 #    this script to run again with an auto-logon. Fortunately choco install
 #    handles trying to install the same package more than once.
 #  - Pass -y to choco install to avoid interactive prompts
- 
-# Install Rhapsody IDE
-& cmd.exe /c C:\vagrant\RhapsodyIDE.exe /S
 
 # Fix Windows Explorer
 Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar

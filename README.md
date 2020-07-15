@@ -1,9 +1,8 @@
-# Windows 10 Vagrant Box for ICs
+# Windows 10 Vagrant Box with pre installed applications
 
-![](https://stash.orionhealth.global/projects/SI/repos/windows-10-box/raw/.README/desktop.png?at=refs%2Fheads%2Fmaster)
+![](.README/desktop.png)
 
-Will set up a virtual machine with all the windows specific applications required for IC work
- * Rhapsody IDE 6.5+
+Will set up a virtual machine with useful applications
  * Notepad++
  * SQL Server Management Studio
  * Git Bash
@@ -25,33 +24,12 @@ https://www.vagrantup.com/
 Requires virtualbox 6.0.x 
 https://www.virtualbox.org/wiki/Download_Old_Builds_6_0
 
-Requires Rhapsody 6.5+
-* Raise RM ticket for IDE download
-
-note: As of the 19th Feb 2020, the versions that definitely work together are Vagrant 2.2.7, Virtualbox 6.0.14 and Rhapsody 6.5
-
 ### Installing
 
 Clone this repository
 
 ```
 git clone <repository>
-```
-
-Copy RhapsodyIDE.exe installer into the cloned repository 
-NOTE: Make sure the filename is 'RhapsodyIDE.exe'
-
-```
-mv ~/Downloads/RhapsodyIDE.exe <working directory>/windows-10-box/RhapsodyIDE.exe
-```
-
-The directory should look as follows:
-```
-windows-10-box
-├── README.md
-├── RhapsodyIDE.exe
-├── Vagrantfile
-└── setup.ps1
 ```
 
 Run vagrant up. This will start setting up the virtual machine. Please allow 3 hours for setup to complete (The first time running will take the longest as the Windows 10 image needs to be downladed, subsequent runs will be approx. 45 minutes). Once the vagrant command completes, the virtual machine will restart and continue setting up the applications with Powershell.
@@ -62,13 +40,11 @@ vagrant up
 
 When prompted to do so within the VM, type in 'enter' and press the return key to complete the setup
 
-![](https://stash.orionhealth.global/projects/SI/repos/windows-10-box/raw/.README/prompt.png?at=refs%2Fheads%2Fmaster)
+![](.README/prompt.png)
 
 ```
 enter
 ```
-
-
 
 
 ### Uninstalling
